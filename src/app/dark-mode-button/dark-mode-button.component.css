@@ -1,0 +1,26 @@
+.dot {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(99, 102, 241, 0.8);
+  }
+  
+  input:checked + .dot {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 50px rgba(59, 130, 246, 0.8);
+  }
+  @keyframes ping {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ping {
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+    

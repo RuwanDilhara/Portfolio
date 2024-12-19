@@ -1,0 +1,42 @@
+    <label for="toggleDarkMode" class="relative flex items-center cursor-pointer">
+      <!-- Hidden Checkbox -->
+      <input
+        id="toggleDarkMode"
+        type="checkbox"
+        class="sr-only"
+        (change)="toggleDarkMode($event)"
+      />
+      <!-- Track -->
+      <div
+        class="w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full transition-colors duration-500"
+      ></div>
+      <!-- Ball with Icon -->
+      <div
+        class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow-md flex items-center justify-center transform transition-transform duration-500 dark:translate-x-7"
+      >
+        <!-- Sun Icon -->
+        <svg
+          *ngIf="!isDarkMode"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 text-yellow-500"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 16a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm8-7a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM4 10a1 1 0 01-1 1H1a1 1 0 110-2h2a1 1 0 011 1zm12.071-7.071a1 1 0 00-1.414 0l-1.414 1.414a1 1 0 001.414 1.414L15.071 3.93a1 1 0 000-1.414zM4.343 15.657a1 1 0 10-1.414-1.414l-1.414 1.414a1 1 0 001.414 1.414l1.414-1.414zm12.728 1.414a1 1 0 00-1.414-1.414l-1.414 1.414a1 1 0 101.414 1.414l1.414-1.414zM5.757 4.343a1 1 0 00-1.414-1.414L2.93 4.343a1 1 0 101.414 1.414L5.757 4.343z"
+          />
+        </svg>
+        <!-- Moon Icon -->
+        <svg
+          *ngIf="isDarkMode"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 text-gray-800"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 1a9 9 0 018.94 10.95A7 7 0 0110 2a7.5 7.5 0 00-.71 14.9A9 9 0 0110 1z"
+          />
+        </svg>
+      </div>
+    </label>
